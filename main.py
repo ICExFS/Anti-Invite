@@ -163,7 +163,13 @@ async def on_message(msg):
 
 @bot.command()
 async def whitelist(ctx):
-    pass
+    prefix = d.get_prefix(ctx.guild.id)
+    embed = discord.Embed(
+        title = "Whitelist Help Command",
+        description = "`{prefix}.add_whitelist <user>`\n`{prefix}.remove_whitelist <user>`"
+    )
+    await ctx.send(embed=embed)
+    
 
 @bot.command()
 async def add_whitelist(ctx, member: discord.Member=None):
