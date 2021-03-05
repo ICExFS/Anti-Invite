@@ -21,7 +21,7 @@ token = "bot token goes here"
 
 class Database:
     def __init__(self):
-        self._conn = sqlite3.connect('Database/Data.db')
+        self._conn = sqlite3.connect('database.db')
         self._c = self._conn.cursor()
 
     def remove_guild(self, server_id: int):
